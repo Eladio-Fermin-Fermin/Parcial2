@@ -10,7 +10,7 @@
 
         <StackPanel Orientation="Vertical" Margin="10,0,10,-93">
             <StackPanel Orientation="Vertical">
-                <Label Content="Id"/>
+                <Label Content="ProyectoId"/>
 
                 <StackPanel Orientation="Horizontal">
                     <TextBox x:Name="IdTextBox" Text="{Binding PartidaId}" Width="100" Height="18"/>
@@ -25,13 +25,13 @@
                 <Label Content="Fecha"/>
                 <DatePicker x:Name="FechaDatePicker" SelectedDate="{Binding Fecha}"></DatePicker>
 
-                <Label Content="Descripcion"/>
-                <TextBox x:Name="DescripcionTextBox" Text="{Binding Descripcion}"/>
-                <GroupBox Header="Agregar Jugadores">
+                <Label Content="Descripción del Proyecto"/>
+                <TextBox x:Name="DescripcionTextBox" Text="{Binding Descripcion}" Height="30"/>
+                <GroupBox Header="Detalle de tareas a realizar">
                     <StackPanel Orientation="Horizontal" Margin="0,0,12,0">
-                        <Label Content="Jugador"/>
+                        <Label Content="Tipo de Tarea"/>
                         <ComboBox x:Name="JugadoresComboBox" Width="188"  />
-                        <Label Content="Posicion"/>
+                        <Label Content="Requerimiento de la tarea"/>
                         <TextBox x:Name="PosicionTexBox" Width="147" />
                         <Button x:Name="AgregarFilaButton" Margin="10,0" Click="AgregarFilaButton_Click" Width="82">
                             <StackPanel Orientation="Horizontal">
@@ -49,19 +49,19 @@
                 <DataGrid x:Name="DetalleDataGrid" Height="80" HorizontalAlignment="Left">
                     <!--AlternatingRowBackground="#FFBAE3FF" AutoGenerateColumns="False" ItemsSource="{Binding OrdenesDetalles}" Margin="0,5,0,0" Width="777" SelectionChanged="DetalleDataGrid_SelectionChanged">-->
                     <DataGrid.Columns>
-                        <DataGridTextColumn Header="JugadorId" />
-                        <DataGridTextColumn Header="Nombres" />
-                        <DataGridTextColumn Header="Posicion" />
+                        <DataGridTextColumn Header="TipoId" />
+                        <DataGridTextColumn Header="Tipo Tarea" />
+                        <DataGridTextColumn Header="Requerimiento" />
                         <!--IsReadOnly="True" Binding="{Binding Posicion}"/>-->
 
                     </DataGrid.Columns>
                 </DataGrid>
 
                 <!--Boton Remover-->
-                <Button x:Name="RemoverFilaButton" Margin="10,0" Click="RemoverFilaButton_Click" Width="166">
+                <Button x:Name="RemoverFilaButton" Margin="10,0" Click="RemoverFilaButton_Click" Width="117">
                     <StackPanel Orientation="Horizontal">
                         <Image Source="/Resources/Eliminar.png"/>
-                        <Label Content="Remover Fila Seleccionada"/>
+                        <Label Content="Remover Fila"/>
                     </StackPanel>
 
                 </Button>
@@ -90,6 +90,10 @@
                         <Label Content="Eliminar" FontWeight="Bold" Padding="-2"/>
                     </StackPanel>
                 </Button>
+                
+                <Label Content="Tiempo"/>
+                <TextBox x:Name="Tiempo" Text="{Binding}" Width="100" Height="18"/>
+
             </StackPanel>
         </StackPanel>
 

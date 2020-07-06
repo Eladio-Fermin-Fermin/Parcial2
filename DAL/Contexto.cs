@@ -9,7 +9,6 @@ namespace Parcial2.DAL
     {
 
 
-
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             optionsBuilder.UseSqlite(@"Data Source = Data\.db");
