@@ -1,0 +1,95 @@
+﻿<Window x:Class="Parcial2.UI.Registro.rR"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Parcial2.UI.Registro"
+        mc:Ignorable="d"
+        Title="rR" Height="450" Width="800">
+    <Grid>
+
+        <StackPanel Orientation="Vertical" Margin="10,0,10,-93">
+            <StackPanel Orientation="Vertical">
+                <Label Content="Id"/>
+
+                <StackPanel Orientation="Horizontal">
+                    <TextBlock x:Name="IdTextBox" Text="{Binding PartidaId}" Width="100" Height="18"/>
+                    <Button Name="BuscarButton" Width="65" Height="20" HorizontalAlignment="Left" Click="BuscarButton_Click">
+                        <StackPanel Orientation="Horizontal">
+                            <Image Source="/Resources/Buscar1.png"/>
+                            <Label Content="Buscar" FontWeight="Bold" Padding="-2"/>
+                        </StackPanel>
+                    </Button>
+                </StackPanel>
+
+                <Label Content="Fecha"/>
+                <DatePicker x:Name="FechaDatePicker" SelectedDate="{Binding Fecha}"></DatePicker>
+
+                <Label Content="Descripcion"/>
+                <TextBlock x:Name="DescripcionTextBox" Text="{Binding Descripcion}"/>
+                <GroupBox Header="Agregar Jugadores">
+                    <StackPanel Orientation="Horizontal" Margin="0,0,12,0">
+                        <Label Content="Jugador"/>
+                        <ComboBox x:Name="JugadoresComboBox" Width="188"  />
+                        <Label Content="Posicion"/>
+                        <TextBlock x:Name="PosicionTexBox" Width="147" />
+                        <Button x:Name="AgregarFilaButton" Margin="10,0" Click="AgregarFilaButton_Click" Width="82">
+                            <StackPanel Orientation="Horizontal">
+                                <Image Source="/Resources/agregar.png"/>
+                                <Label Content="Agregar"/>
+                            </StackPanel>
+                        </Button>
+
+                    </StackPanel>
+
+
+                </GroupBox>
+
+                <!--DATAGrid, , , , -->
+                <DataGrid x:Name="DetalleDataGrid" Height="80" HorizontalAlignment="Left" AlternatingRowBackground="#FFBAE3FF" AutoGenerateColumns="False" ItemsSource="{Binding OrdenesDetalles}" Margin="0,5,0,0" Width="777" SelectionChanged="DetalleDataGrid_SelectionChanged">
+                    <DataGrid.Columns>
+                        <DataGridTextColumn Header="JugadorId" IsReadOnly="True" Binding="{Binding JugadorId}"/>
+                        <DataGridTextColumn Header="Nombres" />
+                        <DataGridTextColumn Header="Posicion" IsReadOnly="True" Binding="{Binding Posicion}"/>
+
+                    </DataGrid.Columns>
+                </DataGrid>
+
+                <!--Boton Remover-->
+                <Button x:Name="RemoverFilaButton" Margin="10,0" Click="RemoverFilaButton_Click" Width="166">
+                    <StackPanel Orientation="Horizontal">
+                        <Image Source="/Resources/Eliminar.png"/>
+                        <Label Content="Remover Fila Seleccionada"/>
+                    </StackPanel>
+
+                </Button>
+
+            </StackPanel>
+
+            <!--Botones-->
+            <StackPanel Orientation="Horizontal" Margin="0,10">
+                <Button Name="NuevoButton" Width="60" Height="20" HorizontalAlignment="Left" Click="NuevoButton_Click">
+                    <StackPanel Orientation="Horizontal">
+                        <Image Source="/Resources/Nuevo2.png" />
+                        <Label Content="Nuevo" FontWeight="Bold" Padding="-2" Width="45"/>
+                    </StackPanel>
+                </Button>
+
+                <Button Name="GuardarButton" Height="20" HorizontalContentAlignment="Left" Margin="26,0,0,0" Click="GuardarButton_Click">
+                    <StackPanel Orientation="Horizontal">
+                        <Image Source="/Resources/Guardar1.png" />
+                        <Label Content="Guardar" FontWeight="Bold" Padding="-2"/>
+                    </StackPanel>
+                </Button>
+
+                <Button Name="EliminarButton" Width="68" Height="20" HorizontalContentAlignment="Left" Margin="23,0,0,0" Click="EliminarButton_Click">
+                    <StackPanel Orientation="Horizontal">
+                        <Image Source="/Resources/Eliminar2.png" />
+                        <Label Content="Eliminar" FontWeight="Bold" Padding="-2"/>
+                    </StackPanel>
+                </Button>
+            </StackPanel>
+        </StackPanel>
+
+    </Grid>
+</Window>

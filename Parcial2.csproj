@@ -7,11 +7,16 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="Resources\add.png" />
+    <None Remove="Resources\agregar.png" />
     <None Remove="Resources\Agregar1.png" />
+    <None Remove="Resources\Buscar.png" />
     <None Remove="Resources\Buscar1.png" />
+    <None Remove="Resources\Eliminar.png" />
     <None Remove="Resources\Eliminar1.png" />
     <None Remove="Resources\Eliminar2.png" />
     <None Remove="Resources\Eliminar3.png" />
+    <None Remove="Resources\Guardar.png" />
     <None Remove="Resources\Guardar1.png" />
     <None Remove="Resources\Guardar2.png" />
     <None Remove="Resources\Nuevo1.png" />
@@ -23,14 +28,25 @@
     <Folder Include="DATA\" />
     <Folder Include="DAL\" />
     <Folder Include="BLL\" />
-    <Folder Include="UI\Registro\" />
   </ItemGroup>
 
   <ItemGroup>
+    <Resource Include="Resources\add.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resources\agregar.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
     <Resource Include="Resources\Agregar1.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Resource>
+    <Resource Include="Resources\Buscar.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
     <Resource Include="Resources\Buscar1.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resources\Eliminar.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Resource>
     <Resource Include="Resources\Eliminar1.png">
@@ -40,6 +56,9 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Resource>
     <Resource Include="Resources\Eliminar3.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resources\Guardar.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Resource>
     <Resource Include="Resources\Guardar1.png">
