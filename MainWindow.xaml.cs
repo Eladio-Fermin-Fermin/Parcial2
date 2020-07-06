@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Parcial2.UI.Consulta;
+using Parcial2.UI.Registro;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -27,7 +29,14 @@ namespace Parcial2
 
         private void MenuItem_Click(object sender, RoutedEventArgs e)
         {
+            c C = new c();
+            C.Show();
+        }
 
+        private void MenuItem_Click_1(object sender, RoutedEventArgs e)
+        {
+            rR rr = new rR();
+            rr.Show();
         }
     }
 }

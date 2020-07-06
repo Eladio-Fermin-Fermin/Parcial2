@@ -10,7 +10,7 @@
 
         <StackPanel>
             <Menu>
-                <MenuItem Header="Registros">
+                <MenuItem Header="Registros" Click="MenuItem_Click_1">
                     <MenuItem Header="Jugador" Click="MenuItem_Click"/>
                 </MenuItem>
                 <MenuItem Header="Consultas">

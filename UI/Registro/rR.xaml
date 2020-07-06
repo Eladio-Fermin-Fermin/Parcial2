@@ -13,11 +13,11 @@
                 <Label Content="Id"/>
 
                 <StackPanel Orientation="Horizontal">
-                    <TextBlock x:Name="IdTextBox" Text="{Binding PartidaId}" Width="100" Height="18"/>
-                    <Button Name="BuscarButton" Width="65" Height="20" HorizontalAlignment="Left" Click="BuscarButton_Click">
+                    <TextBox x:Name="IdTextBox" Text="{Binding PartidaId}" Width="100" Height="18"/>
+                    <Button Name="BuscarButton" Margin="5,0" Click="BuscarButton_Click">
                         <StackPanel Orientation="Horizontal">
-                            <Image Source="/Resources/Buscar1.png"/>
-                            <Label Content="Buscar" FontWeight="Bold" Padding="-2"/>
+                            <Image Source="/Resources/Buscar.png"/>
+                            <Label Content="Buscar"/>
                         </StackPanel>
                     </Button>
                 </StackPanel>
@@ -26,13 +26,13 @@
                 <DatePicker x:Name="FechaDatePicker" SelectedDate="{Binding Fecha}"></DatePicker>
 
                 <Label Content="Descripcion"/>
-                <TextBlock x:Name="DescripcionTextBox" Text="{Binding Descripcion}"/>
+                <TextBox x:Name="DescripcionTextBox" Text="{Binding Descripcion}"/>
                 <GroupBox Header="Agregar Jugadores">
                     <StackPanel Orientation="Horizontal" Margin="0,0,12,0">
                         <Label Content="Jugador"/>
                         <ComboBox x:Name="JugadoresComboBox" Width="188"  />
                         <Label Content="Posicion"/>
-                        <TextBlock x:Name="PosicionTexBox" Width="147" />
+                        <TextBox x:Name="PosicionTexBox" Width="147" />
                         <Button x:Name="AgregarFilaButton" Margin="10,0" Click="AgregarFilaButton_Click" Width="82">
                             <StackPanel Orientation="Horizontal">
                                 <Image Source="/Resources/agregar.png"/>
@@ -46,11 +46,13 @@
                 </GroupBox>
 
                 <!--DATAGrid, , , , -->
-                <DataGrid x:Name="DetalleDataGrid" Height="80" HorizontalAlignment="Left" AlternatingRowBackground="#FFBAE3FF" AutoGenerateColumns="False" ItemsSource="{Binding OrdenesDetalles}" Margin="0,5,0,0" Width="777" SelectionChanged="DetalleDataGrid_SelectionChanged">
+                <DataGrid x:Name="DetalleDataGrid" Height="80" HorizontalAlignment="Left">
+                    <!--AlternatingRowBackground="#FFBAE3FF" AutoGenerateColumns="False" ItemsSource="{Binding OrdenesDetalles}" Margin="0,5,0,0" Width="777" SelectionChanged="DetalleDataGrid_SelectionChanged">-->
                     <DataGrid.Columns>
-                        <DataGridTextColumn Header="JugadorId" IsReadOnly="True" Binding="{Binding JugadorId}"/>
+                        <DataGridTextColumn Header="JugadorId" />
                         <DataGridTextColumn Header="Nombres" />
-                        <DataGridTextColumn Header="Posicion" IsReadOnly="True" Binding="{Binding Posicion}"/>
+                        <DataGridTextColumn Header="Posicion" />
+                        <!--IsReadOnly="True" Binding="{Binding Posicion}"/>-->
 
                     </DataGrid.Columns>
                 </DataGrid>
