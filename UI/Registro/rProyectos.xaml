@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Parcial2.UI.Registro"
         mc:Ignorable="d"
-        Title="rR" Height="450" Width="800">
+        Title="Proyecto" Height="450" Width="800">
     <Grid>
 
         <StackPanel Orientation="Vertical" Margin="10,0,10,-93">
@@ -13,7 +13,7 @@
                 <Label Content="ProyectoId"/>
 
                 <StackPanel Orientation="Horizontal">
-                    <TextBox x:Name="IdTextBox" Text="{Binding PartidaId}" Width="100" Height="18"/>
+                    <TextBox x:Name="ProyectoIdTextBox" Text="{Binding ProyectoId}" Width="100" Height="18"/>
                     <Button Name="BuscarButton" Margin="5,0" Click="BuscarButton_Click">
                         <StackPanel Orientation="Horizontal">
                             <Image Source="/Resources/Buscar.png"/>
@@ -46,13 +46,14 @@
                 </GroupBox>
 
                 <!--DATAGrid, , , , -->
-                <DataGrid x:Name="DetalleDataGrid" Height="80" HorizontalAlignment="Left">
-                    <!--AlternatingRowBackground="#FFBAE3FF" AutoGenerateColumns="False" ItemsSource="{Binding OrdenesDetalles}" Margin="0,5,0,0" Width="777" SelectionChanged="DetalleDataGrid_SelectionChanged">-->
+                <DataGrid x:Name="DetalleDataGrid" Height="80" HorizontalAlignment="Left" AlternatingRowBackground="#FFBAE3FF" AutoGenerateColumns="False" ItemsSource="{Binding ProyectoDetalle}" Margin="0,5,0,0" Width="777" SelectionChanged="DetalleDataGrid_SelectionChanged">
                     <DataGrid.Columns>
-                        <DataGridTextColumn Header="TipoId" />
-                        <DataGridTextColumn Header="Tipo Tarea" />
-                        <DataGridTextColumn Header="Requerimiento" />
-                        <!--IsReadOnly="True" Binding="{Binding Posicion}"/>-->
+                        <DataGridTextColumn Header="TipoId" IsReadOnly="True" Binding="{Binding TipoId}"/>
+                        <DataGridTextColumn Header="Tipo Tarea" IsReadOnly="True" Binding="{Binding TipoTarea}"/>
+                        <DataGridTextColumn Header="Requerimiento" IsReadOnly="True" Binding="{Binding Requerimiento}"/>
+                        <DataGridTextColumn Header="Tiempo" IsReadOnly="True" Binding="{Binding Tiempo}"/>
+
+                        <!---->
 
                     </DataGrid.Columns>
                 </DataGrid>
@@ -92,7 +93,7 @@
                 </Button>
                 
                 <Label Content="Tiempo"/>
-                <TextBox x:Name="Tiempo" Text="{Binding}" Width="100" Height="18"/>
+                <TextBox x:Name="Tiempo" Text="{Binding Tiempo}" Width="100" Height="18"/>
 
             </StackPanel>
         </StackPanel>
