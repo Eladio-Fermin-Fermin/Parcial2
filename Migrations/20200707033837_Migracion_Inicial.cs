@@ -44,17 +44,17 @@ namespace Parcial2.Migrations
             migrationBuilder.InsertData(
                 table: "Proyectos",
                 columns: new[] { "ProyectoId", "Descripcion", "Fecha" },
-                values: new object[] { 1, "Server programado en LUA para la instalacion de scrip.", new DateTime(2020, 7, 6, 21, 53, 30, 809, DateTimeKind.Local).AddTicks(2857) });
+                values: new object[] { 1, "Server programado en LUA para la instalacion de scrip.", new DateTime(2020, 7, 6, 23, 38, 36, 959, DateTimeKind.Local).AddTicks(1979) });
 
             migrationBuilder.InsertData(
                 table: "Proyectos",
                 columns: new[] { "ProyectoId", "Descripcion", "Fecha" },
-                values: new object[] { 2, "Realizar un analisis de la empresa.", new DateTime(2020, 7, 6, 21, 53, 30, 809, DateTimeKind.Local).AddTicks(4510) });
+                values: new object[] { 2, "Realizar un analisis de la empresa.", new DateTime(2020, 7, 6, 23, 38, 36, 959, DateTimeKind.Local).AddTicks(4630) });
 
             migrationBuilder.InsertData(
                 table: "Proyectos",
                 columns: new[] { "ProyectoId", "Descripcion", "Fecha" },
-                values: new object[] { 3, "Diseñar un modelo en UML.", new DateTime(2020, 7, 6, 21, 53, 30, 809, DateTimeKind.Local).AddTicks(4558) });
+                values: new object[] { 3, "Diseñar un modelo en UML.", new DateTime(2020, 7, 6, 23, 38, 36, 959, DateTimeKind.Local).AddTicks(4686) });
 
             migrationBuilder.InsertData(
                 table: "TipoTarea",
@@ -70,6 +70,16 @@ namespace Parcial2.Migrations
                 table: "TipoTarea",
                 columns: new[] { "TareaId", "ProyectoId", "TipodeTarea" },
                 values: new object[] { 3, null, "Diseño" });
+
+            migrationBuilder.InsertData(
+                table: "TipoTarea",
+                columns: new[] { "TareaId", "ProyectoId", "TipodeTarea" },
+                values: new object[] { 4, null, "Prueba" });
+
+            migrationBuilder.InsertData(
+                table: "TipoTarea",
+                columns: new[] { "TareaId", "ProyectoId", "TipodeTarea" },
+                values: new object[] { 5, null, "Programacion" });
 
             migrationBuilder.CreateIndex(
                 name: "IX_TipoTarea_ProyectoId",

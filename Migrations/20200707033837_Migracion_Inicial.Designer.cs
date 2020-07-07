@@ -9,7 +9,7 @@ using Parcial2.DAL;
 namespace Parcial2.Migrations
 {
     [DbContext(typeof(Contexto))]
-    [Migration("20200707015331_Migracion_Inicial")]
+    [Migration("20200707033837_Migracion_Inicial")]
     partial class Migracion_Inicial
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -39,19 +39,19 @@ namespace Parcial2.Migrations
                         {
                             ProyectoId = 1,
                             Descripcion = "Server programado en LUA para la instalacion de scrip.",
-                            Fecha = new DateTime(2020, 7, 6, 21, 53, 30, 809, DateTimeKind.Local).AddTicks(2857)
+                            Fecha = new DateTime(2020, 7, 6, 23, 38, 36, 959, DateTimeKind.Local).AddTicks(1979)
                         },
                         new
                         {
                             ProyectoId = 2,
                             Descripcion = "Realizar un analisis de la empresa.",
-                            Fecha = new DateTime(2020, 7, 6, 21, 53, 30, 809, DateTimeKind.Local).AddTicks(4510)
+                            Fecha = new DateTime(2020, 7, 6, 23, 38, 36, 959, DateTimeKind.Local).AddTicks(4630)
                         },
                         new
                         {
                             ProyectoId = 3,
                             Descripcion = "Diseñar un modelo en UML.",
-                            Fecha = new DateTime(2020, 7, 6, 21, 53, 30, 809, DateTimeKind.Local).AddTicks(4558)
+                            Fecha = new DateTime(2020, 7, 6, 23, 38, 36, 959, DateTimeKind.Local).AddTicks(4686)
                         });
                 });
 
@@ -88,6 +88,16 @@ namespace Parcial2.Migrations
                         {
                             TareaId = 3,
                             TipodeTarea = "Diseño"
+                        },
+                        new
+                        {
+                            TareaId = 4,
+                            TipodeTarea = "Prueba"
+                        },
+                        new
+                        {
+                            TareaId = 5,
+                            TipodeTarea = "Programacion"
                         });
                 });
 
