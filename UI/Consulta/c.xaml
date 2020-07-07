@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Parcial2.UI.Consulta"
         mc:Ignorable="d"
-        Title="c" Height="450" Width="640">
+        Title="Consulta" Height="450" Width="640">
     <Grid>
 
         <StackPanel Orientation="Vertical" Margin="10,5,10,0">

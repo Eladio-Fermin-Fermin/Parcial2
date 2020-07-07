@@ -18,7 +18,7 @@ namespace Parcial2.BLL
 
             try
             {
-                paso = contexto.Ordenes.Any(o => o.ProyectoId == id);
+                paso = contexto.Proyectos.Any(o => o.ProyectoId == id);
             }
             catch (Exception)
             {
@@ -41,7 +41,7 @@ namespace Parcial2.BLL
 
             try
             {
-                contexto.Ordenes.Add(proyectos);
+                contexto.Proyectos.Add(proyectos);
                 paso = contexto.SaveChanges() > 0;
             }
             catch (Exception)
@@ -67,7 +67,7 @@ namespace Parcial2.BLL
             {
                 contexto.Database.ExecuteSqlRaw($"Delete FROM OrdenesDetalle Where OrdenId={proyectos.ProyectoId}");
 
-                foreach (var anterior in proyectos.OrdenesDetalles)
+                foreach (var anterior in proyectos.ProyectoDetalle)
 
                 {
                     contexto.Entry(anterior).State = EntityState.Added;

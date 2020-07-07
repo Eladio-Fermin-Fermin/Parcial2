@@ -20,6 +20,7 @@ namespace Parcial2.DAL
         {
             //modelBuilder.Entity<ProyectoDetalle>().HasData(new ProyectoDetalle { TipoTarea = 1, Nombres = "Eladio" });
 
+
             modelBuilder.Entity<Proyectos>().HasData(new Proyectos
             {
                 ProyectoId = 1,

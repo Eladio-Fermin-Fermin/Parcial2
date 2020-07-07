@@ -35,7 +35,7 @@ namespace Parcial2
 
         private void MenuItem_Click_1(object sender, RoutedEventArgs e)
         {
-            rR rr = new rR();
+            rProyectos rr = new rProyectos();
             rr.Show();
         }
     }

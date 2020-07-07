@@ -1,4 +1,4 @@
-﻿<Window x:Class="Parcial2.UI.Registro.rR"
+﻿<Window x:Class="Parcial2.UI.Registro.rProyectos"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
@@ -46,7 +46,7 @@
                 </GroupBox>
 
                 <!--DATAGrid, , , , -->
-                <DataGrid x:Name="DetalleDataGrid" Height="80" HorizontalAlignment="Left" AlternatingRowBackground="#FFBAE3FF" AutoGenerateColumns="False" ItemsSource="{Binding ProyectoDetalle}" Margin="0,5,0,0" Width="777" SelectionChanged="DetalleDataGrid_SelectionChanged">
+                <DataGrid x:Name="DetallesDataGrid" ItemsSource="{Binding ProyectoDetalle}" Height="80" AutoGenerateColumns="False" Margin="0,5,0,0" Width="777">
                     <DataGrid.Columns>
                         <DataGridTextColumn Header="TipoId" IsReadOnly="True" Binding="{Binding TipoId}"/>
                         <DataGridTextColumn Header="Tipo Tarea" IsReadOnly="True" Binding="{Binding TipoTarea}"/>
