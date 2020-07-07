@@ -30,6 +30,18 @@ namespace Parcial2.UI.Registro
             TipodeTareaComboBox.DisplayMemberPath = "TipodeTarea";
         }
 
+
+        private bool Validar()
+        {
+            bool Validado = true;
+            if (ProyectoIdTextBox.Text.Length == 0)
+            {
+                Validado = false;
+                MessageBox.Show("Fallida", "Error", MessageBoxButton.OK, MessageBoxImage.Warning);
+            }
+
+            return Validado;
+        }
         private void Cargar()
         {
             this.DataContext = null;
@@ -54,16 +66,20 @@ namespace Parcial2.UI.Registro
 
         private void AgregarFilaButton_Click(object sender, RoutedEventArgs e)
         {
+            var FilaDetalle = new ProyectoDetalle
+            {
+                TareaId = Convert.ToInt32(TipodeTareaComboBox.SelectedValue.ToString()),
+                Requirimiento = (RequerimientoTextBox.Text.ToString()),
+                Tiempo = Convert.ToDouble(TiempoTextBox.Text.ToString())
+            };
 
-            /*proyectos.ProyectoDetalle.Add(new ProyectoDetalle(Convert.ToInt32(ProyectoIdTextBox.Text),
-                Convert.ToInt32*/
+            this.proyectos.ProyectoDetalle.Add(FilaDetalle);
+            Cargar();
 
+            TipodeTareaComboBox.SelectedIndex = -1;
+            RequerimientoTextBox.Clear();
+            TiempoTextBox.Clear();
             
-            /*var Detalle = new ProyectoDetalle((RequerimientoTexBox.Text), float.Parse(TiempoTexBox.Text));
-
-            proyectos.ProyectoDetalle.Add(Detalle);
-            /*proyectos.Monto += double.Parse(TotalTexbox.Text);
-            ProyectoDetalle.Tiempo float.Parse(CantidadTextBox.Text);*/
 
         }
 
@@ -80,23 +96,30 @@ namespace Parcial2.UI.Registro
 
         private void GuardarButton_Click(object sender, RoutedEventArgs e)
         {
-            /*if (!ValidarGuardar())
+            if (!Validar())
                 return;
 
-            if (OrdenesBLL.Guardar(ordenes))
+            if (ProyectosBLL.Guardar(proyectos))
             {
                 Limpiar();
                 MessageBox.Show("Se a Guardado.", "Exito.", MessageBoxButton.OK, MessageBoxImage.Information);
             }
             else
             {
-                MessageBox.Show("Algo salio mal.", "Error.", MessageBoxButton.OK, MessageBoxImage.Error);
-            }*/
+                MessageBox.Show("ERROR Algo salio mal.", "Error.", MessageBoxButton.OK, MessageBoxImage.Error);
+            }
         }
 
         private void EliminarButton_Click(object sender, RoutedEventArgs e)
         {
-
+            if (ProyectosBLL.Eliminar(int.Parse(ProyectoIdTextBox.Text)))
+                {
+                  Limpiar();
+                  MessageBox.Show("Registro Eliminado", "Exito", MessageBoxButton.OK, MessageBoxImage.Information);
+                }
+            else
+                MessageBox.Show("No se pudo eliminar el registro", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
+          
         }
 
         private void NuevoButton_Click(object sender, RoutedEventArgs e)
@@ -108,7 +131,6 @@ namespace Parcial2.UI.Registro
         {
             this.proyectos = new Proyectos();
             this.DataContext = proyectos;
-            //TipoTareaComboBox.SelectedItem = null;
         }
 
     }

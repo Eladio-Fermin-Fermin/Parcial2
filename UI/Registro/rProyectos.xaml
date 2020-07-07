@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Parcial2.UI.Registro"
         mc:Ignorable="d"
-        Title="Proyecto" Height="450" Width="900">
+        Title="Gestion de Proyecto" Height="450" Width="900">
     <Grid>
 
         <StackPanel Orientation="Vertical" Margin="10,0,10,-93">
@@ -32,9 +32,9 @@
                         <Label Content="Tipo de Tarea"/>
                         <ComboBox x:Name="TipodeTareaComboBox" Width="188"  />
                         <Label Content="Requerimiento de la tarea"/>
-                        <TextBox x:Name="RequerimientoTexBox" Width="147" />
+                        <TextBox x:Name="RequerimientoTextBox" Width="147" />
                         <Label Content="Tiempo(Minutos)"/>
-                        <TextBox x:Name="TiempoTexBox" Width="78" />
+                        <TextBox x:Name="TiempoTextBox" Width="78" />
                         <Button x:Name="AgregarFilaButton" Margin="10,0" Click="AgregarFilaButton_Click" Width="82">
                             <StackPanel Orientation="Horizontal">
                                 <Image Source="/Resources/agregar.png"/>
