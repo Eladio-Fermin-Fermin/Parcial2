@@ -14,7 +14,7 @@ namespace Parcial2.Entidades
         public string Descripcion { get; set; }
 
         [ForeignKey("ProyectoId")]
-        public virtual List<ProyectoDetalle> ProyectoDetalle { get; set; } = new List<ProyectoDetalle>();
+        public virtual List<TipoTarea> ProyectoDetalle { get; set; } = new List<TipoTarea>();
         
     }
 }

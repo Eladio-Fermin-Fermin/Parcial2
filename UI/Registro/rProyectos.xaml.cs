@@ -24,6 +24,10 @@ namespace Parcial2.UI.Registro
         {
             InitializeComponent();
             this.DataContext = proyectos;
+
+            TipodeTareaComboBox.ItemsSource = TipoTareaBLL.GetTipoTarea();
+            TipodeTareaComboBox.SelectedValuePath = "TareaId";
+            TipodeTareaComboBox.DisplayMemberPath = "TipodeTarea";
         }
 
         private void Cargar()
@@ -51,6 +55,16 @@ namespace Parcial2.UI.Registro
         private void AgregarFilaButton_Click(object sender, RoutedEventArgs e)
         {
 
+            /*proyectos.ProyectoDetalle.Add(new ProyectoDetalle(Convert.ToInt32(ProyectoIdTextBox.Text),
+                Convert.ToInt32*/
+
+            
+            /*var Detalle = new ProyectoDetalle((RequerimientoTexBox.Text), float.Parse(TiempoTexBox.Text));
+
+            proyectos.ProyectoDetalle.Add(Detalle);
+            /*proyectos.Monto += double.Parse(TotalTexbox.Text);
+            ProyectoDetalle.Tiempo float.Parse(CantidadTextBox.Text);*/
+
         }
 
         private void RemoverFilaButton_Click(object sender, RoutedEventArgs e)
@@ -66,7 +80,18 @@ namespace Parcial2.UI.Registro
 
         private void GuardarButton_Click(object sender, RoutedEventArgs e)
         {
+            /*if (!ValidarGuardar())
+                return;
 
+            if (OrdenesBLL.Guardar(ordenes))
+            {
+                Limpiar();
+                MessageBox.Show("Se a Guardado.", "Exito.", MessageBoxButton.OK, MessageBoxImage.Information);
+            }
+            else
+            {
+                MessageBox.Show("Algo salio mal.", "Error.", MessageBoxButton.OK, MessageBoxImage.Error);
+            }*/
         }
 
         private void EliminarButton_Click(object sender, RoutedEventArgs e)

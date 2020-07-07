@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Parcial2.UI.Registro"
         mc:Ignorable="d"
-        Title="Proyecto" Height="450" Width="800">
+        Title="Proyecto" Height="450" Width="900">
     <Grid>
 
         <StackPanel Orientation="Vertical" Margin="10,0,10,-93">
@@ -30,9 +30,11 @@
                 <GroupBox Header="Detalle de tareas a realizar">
                     <StackPanel Orientation="Horizontal" Margin="0,0,12,0">
                         <Label Content="Tipo de Tarea"/>
-                        <ComboBox x:Name="JugadoresComboBox" Width="188"  />
+                        <ComboBox x:Name="TipodeTareaComboBox" Width="188"  />
                         <Label Content="Requerimiento de la tarea"/>
-                        <TextBox x:Name="PosicionTexBox" Width="147" />
+                        <TextBox x:Name="RequerimientoTexBox" Width="147" />
+                        <Label Content="Tiempo(Minutos)"/>
+                        <TextBox x:Name="TiempoTexBox" Width="78" />
                         <Button x:Name="AgregarFilaButton" Margin="10,0" Click="AgregarFilaButton_Click" Width="82">
                             <StackPanel Orientation="Horizontal">
                                 <Image Source="/Resources/agregar.png"/>
@@ -48,13 +50,12 @@
                 <!--DATAGrid, , , , -->
                 <DataGrid x:Name="DetallesDataGrid" ItemsSource="{Binding ProyectoDetalle}" Height="80" AutoGenerateColumns="False" Margin="0,5,0,0" Width="777">
                     <DataGrid.Columns>
-                        <DataGridTextColumn Header="TipoId" IsReadOnly="True" Binding="{Binding TipoId}"/>
-                        <DataGridTextColumn Header="Tipo Tarea" IsReadOnly="True" Binding="{Binding TipoTarea}"/>
+                        <DataGridTextColumn Header="TipoId" IsReadOnly="True" Binding="{Binding TareaId}"/>
+                        <DataGridTextColumn Header="Tipo Tarea" IsReadOnly="True" Binding="{Binding TipoTarea.ProyectoId}"/>
                         <DataGridTextColumn Header="Requerimiento" IsReadOnly="True" Binding="{Binding Requerimiento}"/>
                         <DataGridTextColumn Header="Tiempo" IsReadOnly="True" Binding="{Binding Tiempo}"/>
 
                         <!---->
-
                     </DataGrid.Columns>
                 </DataGrid>
 
