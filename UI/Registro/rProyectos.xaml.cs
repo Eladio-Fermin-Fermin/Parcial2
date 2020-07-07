@@ -73,7 +73,8 @@ namespace Parcial2.UI.Registro
                 Tiempo = Convert.ToDouble(TiempoTextBox.Text.ToString())
             };
 
-            this.proyectos.ProyectoDetalle.Add(FilaDetalle);
+           // this.proyectos.ProyectoDetalle.Add(FilaDetalle);
+      
             Cargar();
 
             TipodeTareaComboBox.SelectedIndex = -1;

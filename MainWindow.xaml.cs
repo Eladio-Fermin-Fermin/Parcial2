@@ -27,16 +27,16 @@ namespace Parcial2
             InitializeComponent();
         }
 
-        private void MenuItem_Click(object sender, RoutedEventArgs e)
+        private void MenuItem_Click_4(object sender, RoutedEventArgs e)
         {
-            c C = new c();
-            C.Show();
+            rProyectos rr = new rProyectos();
+            rr.Show();
         }
 
         private void MenuItem_Click_1(object sender, RoutedEventArgs e)
         {
-            rProyectos rr = new rProyectos();
-            rr.Show();
+            c C = new c();
+            C.Show(); 
         }
     }
 }

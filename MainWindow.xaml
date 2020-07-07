@@ -5,17 +5,17 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Parcial2"
         mc:Ignorable="d"
-        Title="Menu Inicial" Height="400" Width="600">
+        Title="Menu Inicio" Height="400" Width="600">
     <Grid>
 
         <StackPanel>
             <Menu>
-                <MenuItem Header="Registros" Click="MenuItem_Click_1">
-                    <MenuItem Header="Jugador" Click="MenuItem_Click"/>
+                <MenuItem Header="Registros" Click="MenuItem_Click_4">
+                    <MenuItem Header="Gestion de Proyectos"/>
                 </MenuItem>
-                <MenuItem Header="Consultas">
-                    <MenuItem Header="Jugadores" Click="MenuItem_Click"/>
-                    <MenuItem Header="Partidas"  Click="MenuItem_Click"/>
+                <MenuItem Header="Consultas" Click="MenuItem_Click_1">
+                    <MenuItem Header="Proyecto"/>
+                    
                 </MenuItem>
             </Menu>
 
